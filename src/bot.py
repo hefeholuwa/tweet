@@ -49,16 +49,36 @@ class AutoReplyBot:
         
         try:
             # Collect tweets from timeline and keyword searches
+            logger.info("Collecting tweet candidates...")
             candidates = self._collect_tweet_candidates()
             stats["tweets_fetched"] = len(candidates)
+            logger.info(f"Found {len(candidates)} tweet candidates")
+            
+            if len(candidates) == 0:
+                logger.warning("No tweet candidates found. This might be due to:")
+                logger.warning("  - All tweets already replied to")
+                logger.warning("  - Rate limits preventing API calls")
+                logger.warning("  - No tweets matching keywords")
+                logger.warning("  - Timeline access restricted (403 error)")
+                return stats
             
             # Filter candidates
+            logger.info("Filtering tweet candidates...")
             filtered = self._filter_tweets(candidates)
             stats["tweets_filtered"] = len(filtered)
+            logger.info(f"After filtering: {len(filtered)} tweets remain")
+            
+            if len(filtered) == 0:
+                logger.warning("No tweets passed filtering. Check your filter settings:")
+                logger.warning(f"  - Min followers: {self.filters.get('min_followers', 0)}")
+                logger.warning(f"  - Exclude retweets: {self.filters.get('exclude_retweets', True)}")
+                logger.warning(f"  - Exclude own tweets: {self.filters.get('exclude_own_tweets', True)}")
+                return stats
             
             # Limit to max replies per run
             max_replies = self.reply_settings.get("max_replies_per_run", 10)
             selected = filtered[:max_replies]
+            logger.info(f"Selected {len(selected)} tweets to reply to (max: {max_replies})")
             
             # Calculate timing to spread replies over 30-40 minutes
             # This ensures the bot runs for the full duration, not too fast
@@ -100,15 +120,23 @@ class AutoReplyBot:
                     reply_id = self.x_api.post_reply(reply_text, tweet["id"])
                     
                     if reply_id:
-                        self.db.mark_tweet_replied(
-                            tweet["id"],
-                            reply_id,
-                            source=tweet.get("source", "unknown"),
-                            keyword=tweet.get("keyword")
-                        )
-                        stats["replies_posted"] += 1
-                        logger.info(f"Successfully posted reply {reply_id}")
+                        try:
+                            self.db.mark_tweet_replied(
+                                tweet["id"],
+                                reply_id,
+                                source=tweet.get("source", "unknown"),
+                                keyword=tweet.get("keyword")
+                            )
+                            stats["replies_posted"] += 1
+                            logger.info(f"Successfully posted reply {reply_id} and recorded in database")
+                        except Exception as db_error:
+                            # Log the database error but don't fail the whole operation
+                            # The reply was posted to Twitter, so we still count it
+                            logger.error(f"Failed to record reply in database: {db_error}", exc_info=True)
+                            stats["replies_posted"] += 1
+                            logger.warning(f"Reply {reply_id} was posted but not recorded in database. This may cause duplicate replies.")
                     else:
+                        logger.warning(f"Failed to post reply to tweet {tweet['id']}")
                         stats["errors"] += 1
                     
                     # Delay between replies - spread evenly over 30-40 minutes

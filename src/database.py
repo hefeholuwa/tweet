@@ -192,8 +192,19 @@ class Database:
             """, (tweet_id, reply_tweet_id, source, keyword))
             self.conn.commit()
             logger.info(f"Marked tweet {tweet_id} as replied (reply: {reply_tweet_id})")
+            
+            # Verify the insert was successful (for debugging)
+            try:
+                cursor.execute("SELECT COUNT(*) as count FROM replied_tweets WHERE tweet_id = %s", (tweet_id,))
+                result = cursor.fetchone()
+                if result and result.get('count', 0) == 0:
+                    logger.warning(f"Warning: Reply record for tweet {tweet_id} not found immediately after insert (may be a timing issue)")
+                else:
+                    logger.debug(f"Verified reply record for tweet {tweet_id} exists in database")
+            except Exception as verify_error:
+                logger.warning(f"Could not verify reply record (non-critical): {verify_error}")
         except Exception as e:
-            logger.error(f"Error marking tweet as replied: {e}")
+            logger.error(f"Error marking tweet as replied: {e}", exc_info=True)
             self.conn.rollback()
             raise
         finally:

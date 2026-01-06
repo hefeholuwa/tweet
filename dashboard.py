@@ -1649,8 +1649,16 @@ def _start_scheduler():
     try:
         config = Config()
         bot = AutoReplyBot(config)
-        scheduler = BotScheduler(bot.run, config.get_schedule_config())
+        scheduler = BotScheduler(
+            bot.run,
+            bot.post_tweet,
+            config.get_schedule_config(),
+            config.get_tweet_settings()
+        )
         scheduler.setup_schedule()
+        
+        # Store scheduler reference for stopping later
+        bot._scheduler = scheduler
         
         with bot_status_lock:
             bot_status["bot_instance"] = bot
@@ -1658,9 +1666,29 @@ def _start_scheduler():
         
         def run_scheduler():
             try:
-                scheduler.run_continuously()
+                logger.info("Scheduler thread started, entering run_continuously loop...")
+                # Make scheduler check bot_status["running"] instead of its own flag
+                scheduler.running = True
+                logger.info("Scheduler started. Waiting for scheduled times...")
+                logger.info(f"Next scheduled runs: Morning at {config.get_schedule_config().get('morning_time')}, Evening at {config.get_schedule_config().get('evening_time')}")
+                
+                while scheduler.running:
+                    # Check if we should stop
+                    with bot_status_lock:
+                        if not bot_status["running"]:
+                            scheduler.running = False
+                            break
+                    
+                    schedule.run_pending()
+                    time.sleep(60)  # Check every minute
+                
+                logger.info("Scheduler stopped (running flag set to False)")
             except Exception as e:
                 logger.error(f"Scheduler error: {e}", exc_info=True)
+                with bot_status_lock:
+                    bot_status["running"] = False
+            finally:
+                logger.info("Scheduler thread exiting")
                 with bot_status_lock:
                     bot_status["running"] = False
         
@@ -1695,16 +1723,29 @@ def settings_automation():
         if action == "start":
             with bot_status_lock:
                 if not bot_status["running"]:
-                    _start_scheduler()
-                    flash("Bot started successfully! It will run twice daily at scheduled times.", "success")
+                    try:
+                        _start_scheduler()
+                        # Check if it actually started
+                        if bot_status["running"]:
+                            flash("Bot started successfully! It will run twice daily at scheduled times.", "success")
+                        else:
+                            flash("Failed to start bot. Check logs for errors.", "danger")
+                    except Exception as e:
+                        logger.error(f"Error starting bot: {e}", exc_info=True)
+                        flash(f"Error starting bot: {str(e)}", "danger")
                 else:
                     flash("Bot is already running.", "warning")
         
         elif action == "stop":
             with bot_status_lock:
                 if bot_status["running"]:
+                    # Stop the scheduler
                     bot_status["running"] = False
-                    # Note: scheduler will stop on next check
+                    if bot_status.get("bot_instance"):
+                        scheduler_obj = getattr(bot_status.get("bot_instance"), "_scheduler", None)
+                        if scheduler_obj:
+                            scheduler_obj.running = False
+                            scheduler_obj.stop()
                     flash("Bot stopped. It will finish current run and then stop.", "success")
                 else:
                     flash("Bot is not running.", "warning")
@@ -1714,10 +1755,16 @@ def settings_automation():
                 if bot_status["running"]:
                     flash("Bot is already running. Please stop it first to run once.", "warning")
                 else:
-                    bot_status["running"] = True
-                    thread = threading.Thread(target=_run_bot_in_thread, daemon=True)
-                    thread.start()
-                    flash("Running bot once... This may take 30-40 minutes.", "info")
+                    try:
+                        bot_status["running"] = True
+                        thread = threading.Thread(target=_run_bot_in_thread, daemon=True)
+                        thread.start()
+                        logger.info("Started 'run once' thread")
+                        flash("Running bot once... This may take 1-5 minutes. Check logs for progress.", "info")
+                    except Exception as e:
+                        logger.error(f"Error starting run_once: {e}", exc_info=True)
+                        bot_status["running"] = False
+                        flash(f"Error starting bot: {str(e)}", "danger")
         
         elif action == "save_schedule":
             data = config.config
