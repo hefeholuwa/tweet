@@ -2,6 +2,7 @@
 import pymysql
 import logging
 import os
+import time
 from typing import Set, Optional, List, Dict, Any
 from datetime import datetime
 from dotenv import load_dotenv
@@ -25,38 +26,57 @@ class Database:
         self.host = host or os.getenv("DB_HOST", "localhost")
         self.port = port or int(os.getenv("DB_PORT", "3306"))
         self.user = user or os.getenv("DB_USER", "root")
-        self.password = password or os.getenv("DB_PASSWORD", "")
+        # Handle empty password (common for local MySQL/XAMPP)
+        db_password = password or os.getenv("DB_PASSWORD", "")
+        self.password = db_password if db_password else ""
         self.database = database or os.getenv("DB_NAME", "twitter")
         
-        # Connect to MySQL server (without database first)
-        try:
-            self.conn = pymysql.connect(
-                host=self.host,
-                port=self.port,
-                user=self.user,
-                password=self.password,
-                charset='utf8mb4',
-                cursorclass=pymysql.cursors.DictCursor
-            )
-            self._ensure_database_exists()
-            self.conn.close()
-            
-            # Connect to the specific database
-            self.conn = pymysql.connect(
-                host=self.host,
-                port=self.port,
-                user=self.user,
-                password=self.password,
-                database=self.database,
-                charset='utf8mb4',
-                cursorclass=pymysql.cursors.DictCursor,
-                autocommit=False
-            )
-            self.create_tables()
-            logger.info(f"Connected to MySQL database '{self.database}' on {self.host}:{self.port}")
-        except Exception as e:
-            logger.error(f"Error connecting to MySQL database: {e}")
-            raise
+        # Connect to MySQL server with retry logic
+        max_retries = 3
+        retry_delay = 2  # seconds
+        
+        for attempt in range(max_retries):
+            try:
+                # Connect to MySQL server (without database first)
+                self.conn = pymysql.connect(
+                    host=self.host,
+                    port=self.port,
+                    user=self.user,
+                    password=self.password,
+                    charset='utf8mb4',
+                    cursorclass=pymysql.cursors.DictCursor,
+                    connect_timeout=10
+                )
+                self._ensure_database_exists()
+                self.conn.close()
+                
+                # Connect to the specific database
+                self.conn = pymysql.connect(
+                    host=self.host,
+                    port=self.port,
+                    user=self.user,
+                    password=self.password,
+                    database=self.database,
+                    charset='utf8mb4',
+                    cursorclass=pymysql.cursors.DictCursor,
+                    autocommit=False,
+                    connect_timeout=10
+                )
+                self.create_tables()
+                logger.info(f"Connected to MySQL database '{self.database}' on {self.host}:{self.port}")
+                break
+                
+            except pymysql.OperationalError as e:
+                if attempt < max_retries - 1:
+                    logger.warning(f"Connection attempt {attempt + 1} failed: {e}. Retrying in {retry_delay} seconds...")
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # Exponential backoff
+                else:
+                    logger.error(f"Failed to connect to MySQL database after {max_retries} attempts: {e}")
+                    raise
+            except Exception as e:
+                logger.error(f"Error connecting to MySQL database: {e}")
+                raise
     
     def _ensure_database_exists(self) -> None:
         """Ensure the database exists, create if it doesn't."""
@@ -192,17 +212,6 @@ class Database:
             """, (tweet_id, reply_tweet_id, source, keyword))
             self.conn.commit()
             logger.info(f"Marked tweet {tweet_id} as replied (reply: {reply_tweet_id})")
-            
-            # Verify the insert was successful (for debugging)
-            try:
-                cursor.execute("SELECT COUNT(*) as count FROM replied_tweets WHERE tweet_id = %s", (tweet_id,))
-                result = cursor.fetchone()
-                if result and result.get('count', 0) == 0:
-                    logger.warning(f"Warning: Reply record for tweet {tweet_id} not found immediately after insert (may be a timing issue)")
-                else:
-                    logger.debug(f"Verified reply record for tweet {tweet_id} exists in database")
-            except Exception as verify_error:
-                logger.warning(f"Could not verify reply record (non-critical): {verify_error}")
         except Exception as e:
             logger.error(f"Error marking tweet as replied: {e}", exc_info=True)
             self.conn.rollback()

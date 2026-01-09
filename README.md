@@ -58,15 +58,12 @@ pip install -r requirements.txt
    - (Optional) Add OpenAI API key if you want AI-generated replies
    
    **Method C: Environment Variables**
-   - Run `python setup_env.py` for interactive .env setup
-   - Or create `.env` file manually (see `env.example` as reference)
+   - Create `.env` file manually (see `env.example` as reference)
    - The bot will automatically load environment variables
 
 5. **Test your configuration**:
-   ```bash
-   python test_credentials.py
-   ```
-   This will verify your API credentials and configuration are correct.
+   - Run the dashboard to test your credentials: `python dashboard.py`
+   - Or run the bot once to test: `python main.py --run-once`
 
 ## Configuration
 
@@ -204,9 +201,6 @@ tweetpy/
 │   └── scheduler.py       # Scheduling system
 ├── main.py                # Entry point
 ├── setup.py               # Interactive configuration setup (RECOMMENDED)
-├── test_credentials.py    # Test script to verify credentials
-├── setup_env.py           # Environment variables setup helper
-├── config.json.example    # Configuration template
 ├── env.example            # Environment variables template
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
@@ -238,4 +232,3 @@ For issues or questions:
 
 **Version**: 1.0.0  
 **Last Updated**: January 2026
-

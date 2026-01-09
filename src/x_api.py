@@ -117,7 +117,6 @@ class XAPI:
                 count=max_per_page
             ).pages(pages_needed):
                 page_count += 1
-                logger.debug(f"Processing page {page_count}, tweets in page: {len(page) if page else 0}")
                 
                 if not page:
                     logger.warning(f"No tweets returned on page {page_count}")
@@ -170,8 +169,6 @@ class XAPI:
             return []
         except Exception as e:
             logger.error(f"Error fetching user tweets: {e}", exc_info=True)
-            import traceback
-            traceback.print_exc()
             return []
 
     def get_liked_tweets(self, count: int = 3200) -> List[Dict[str, Any]]:

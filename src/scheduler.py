@@ -71,13 +71,14 @@ class BotScheduler:
         """Set up scheduled jobs with time ranges."""
         schedule.clear()
         
-        # Schedule checks every 5 minutes during time ranges
+        # Schedule checks every 5 minutes to see if we're in a time range
         schedule.every(5).minutes.do(self._check_and_run)
         
         logger.info(f"Schedule set: Morning {self.morning_start}-{self.morning_end}, Evening {self.evening_start}-{self.evening_end}")
+        logger.info(f"Bot will run every 30+ minutes during time ranges")
         
         if self.tweet_enabled or self.thread_enabled:
-            logger.info(f"Tweet posting enabled: {self.tweets_per_run} tweets, {self.threads_per_run} threads per run")
+            logger.info(f"Content posting: {self.tweets_per_run} tweets, {self.threads_per_run} threads every 15+ minutes during time ranges")
     
     def _check_and_run(self) -> None:
         """Check if we're in a time range and run bot/tweets if needed."""
@@ -91,14 +92,17 @@ class BotScheduler:
         if in_morning or in_evening:
             run_type = "morning" if in_morning else "evening"
             
-            # Run bot (replies) - only once per time range to avoid too many runs
-            # We'll use a simple approach: run every 30 minutes during the time range
-            if int(now.minute) % 30 == 0:  # Run at :00 and :30 of each hour
+            # Run bot (replies) - every 30-45 minutes during the time range
+            last_bot = self.last_bot_run.get(run_type)
+            if last_bot is None or (now - last_bot).total_seconds() >= 30 * 60:  # 30 minutes minimum
                 self._run_bot(run_type)
+                self.last_bot_run[run_type] = now
             
-            # Post tweets and threads - more frequently but still spaced out
-            if int(now.minute) % 15 == 0:  # Run at :00, :15, :30, :45 of each hour
+            # Post tweets and threads - every 15-20 minutes during the time range
+            last_content = self.last_content_post.get(run_type)
+            if last_content is None or (now - last_content).total_seconds() >= 15 * 60:  # 15 minutes minimum
                 self._post_content(run_type)
+                self.last_content_post[run_type] = now
     
     def _run_bot(self, run_type: str) -> None:
         """Wrapper to run bot and handle errors."""
@@ -159,7 +163,7 @@ class BotScheduler:
         logger.info("Scheduler stopped")
     
     def run_now(self) -> None:
-        """Run the bot immediately (for testing)."""
+        """Run the bot immediately."""
         logger.info("Running bot immediately (manual trigger)...")
         self._run_bot("manual")
 

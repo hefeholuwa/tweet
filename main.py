@@ -74,6 +74,7 @@ def main():
             scheduler = BotScheduler(
                 bot.run,
                 bot.post_tweet,
+                bot.post_thread_tweet,
                 config.get_schedule_config(),
                 config.get_tweet_settings()
             )

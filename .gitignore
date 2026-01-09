@@ -1,6 +1,6 @@
 # Environment and secrets
-config.json
 .env
+config.json
 *.db
 *.sqlite
 *.sqlite3

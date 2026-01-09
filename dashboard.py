@@ -5,6 +5,7 @@ import re
 import logging
 import threading
 import time
+import os
 from collections import Counter
 from pathlib import Path
 from typing import List
@@ -34,7 +35,8 @@ bot_status_lock = threading.Lock()
 db_instance = None
 
 app = Flask(__name__)
-app.secret_key = "change-this-secret-key-in-production"  # TODO: change in production / hosting
+# Use environment variable for secret key in production, fallback for development
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "change-this-secret-key-in-production")
 
 DB_PATH = Path("bot_state.db")
 AUTH_DB_PATH = Path("auth.db")
@@ -138,7 +140,11 @@ def get_db_connection():
     """Get MySQL database connection using Database class."""
     global db_instance
     if db_instance is None:
-        db_instance = Database()
+        try:
+            db_instance = Database()
+        except Exception as e:
+            logger.error(f"Failed to create database connection: {e}", exc_info=True)
+            raise
     return db_instance
 
 
@@ -865,17 +871,27 @@ AUTOMATION_TEMPLATE = """
             
             <div class="col-12">
               <h5>Schedule Settings</h5>
-              <p class="text-muted small">The bot will run twice daily at these times. Each run spreads replies over 30-40 minutes to avoid account bans.</p>
+              <p class="text-muted small">The bot will run continuously during these time ranges. Replies are posted every 30+ minutes, and content (tweets/threads) every 15+ minutes during the ranges.</p>
             </div>
 
             <div class="col-md-6">
-              <label class="form-label">Morning Run Time</label>
-              <input type="time" name="morning_time" class="form-control" value="{{ schedule.get('morning_time', '09:00') }}" required>
+              <label class="form-label">Morning Start Time</label>
+              <input type="time" name="morning_start" class="form-control" value="{{ schedule.get('morning_start', schedule.get('morning_time', '09:00')) }}" required>
             </div>
 
             <div class="col-md-6">
-              <label class="form-label">Evening Run Time</label>
-              <input type="time" name="evening_time" class="form-control" value="{{ schedule.get('evening_time', '18:00') }}" required>
+              <label class="form-label">Morning End Time</label>
+              <input type="time" name="morning_end" class="form-control" value="{{ schedule.get('morning_end', '11:00') }}" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Evening Start Time</label>
+              <input type="time" name="evening_start" class="form-control" value="{{ schedule.get('evening_start', schedule.get('evening_time', '18:00')) }}" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Evening End Time</label>
+              <input type="time" name="evening_end" class="form-control" value="{{ schedule.get('evening_end', '20:00') }}" required>
             </div>
 
             <div class="col-md-6">
@@ -889,19 +905,48 @@ AUTOMATION_TEMPLATE = """
             </div>
 
             <div class="col-md-6">
-              <label class="form-label">Max Replies Per Run</label>
-              <input type="number" name="max_replies_per_run" class="form-control" value="{{ reply_settings.get('max_replies_per_run', 10) }}" min="1" max="50" required>
-              <small class="text-muted">How many replies to post per scheduled run (recommended: 5-10)</small>
+              <label class="form-label">Min Replies Per Run</label>
+              <input type="number" name="min_replies_per_run" class="form-control" value="{{ reply_settings.get('min_replies_per_run', 20) }}" min="1" max="50" required>
+              <small class="text-muted">Minimum replies per run (20-50 recommended)</small>
             </div>
 
             <div class="col-md-6">
-              <label class="form-label">Run Duration (minutes)</label>
+              <label class="form-label">Max Replies Per Run</label>
+              <input type="number" name="max_replies_per_run" class="form-control" value="{{ reply_settings.get('max_replies_per_run', 50) }}" min="1" max="50" required>
+              <small class="text-muted">Maximum replies per run (20-50 recommended)</small>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Delay Between Replies (minutes)</label>
               <div class="input-group">
-                <input type="number" name="delay_minutes_min" class="form-control" value="{{ reply_settings.get('delay_minutes_min', 30) }}" min="5" max="60" required>
+                <input type="number" name="delay_minutes_min" class="form-control" value="{{ reply_settings.get('delay_minutes_min', 5) }}" min="1" max="60" required>
                 <span class="input-group-text">to</span>
-                <input type="number" name="delay_minutes_max" class="form-control" value="{{ reply_settings.get('delay_minutes_max', 40) }}" min="5" max="60" required>
+                <input type="number" name="delay_minutes_max" class="form-control" value="{{ reply_settings.get('delay_minutes_max', 15) }}" min="1" max="60" required>
               </div>
-              <small class="text-muted">Each run will spread replies over this time period (30-40 minutes recommended)</small>
+              <small class="text-muted">Time between each reply (5-15 minutes recommended for 20-50 replies)</small>
+            </div>
+
+            <div class="col-12 mt-4">
+              <h5>Content Posting Settings</h5>
+              <p class="text-muted small">The bot will also post original tweets and threads during time ranges.</p>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Tweets Per Run</label>
+              <input type="number" name="tweets_per_run" class="form-control" value="{{ tweet_settings.get('tweets_per_run', 1) }}" min="0" max="10" required>
+              <small class="text-muted">How many original tweets to post per run</small>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Threads Per Run</label>
+              <input type="number" name="threads_per_run" class="form-control" value="{{ tweet_settings.get('threads_per_run', 0) }}" min="0" max="5" required>
+              <small class="text-muted">How many threads to post per run</small>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Tweets Per Thread</label>
+              <input type="number" name="thread_tweet_count" class="form-control" value="{{ tweet_settings.get('thread_tweet_count', 3) }}" min="2" max="10" required>
+              <small class="text-muted">Number of tweets in each thread</small>
             </div>
 
             <div class="col-12 mt-4">
@@ -918,12 +963,13 @@ AUTOMATION_TEMPLATE = """
                 <i class="bi bi-info-circle me-2"></i>How It Works
               </h6>
               <ul class="mb-0 small">
-                <li>The bot runs twice daily at your scheduled times</li>
-                <li>Each run spreads replies over 30-40 minutes to appear natural</li>
-                <li>Replies are spaced out with random delays to avoid detection</li>
+                <li>The bot runs continuously during morning and evening time ranges</li>
+                <li>Replies are posted every 30+ minutes during time ranges (20-50 replies total)</li>
+                <li>Original tweets and threads are posted every 15+ minutes during time ranges</li>
+                <li>Replies are spaced out with random delays (5-15 minutes) to appear natural</li>
                 <li>The bot automatically finds tweets matching your keywords</li>
                 <li>All replies are tracked to prevent duplicates</li>
-                <li>Start with 5-10 replies per run to test safely</li>
+                <li>Content is posted automatically based on your settings</li>
               </ul>
             </div>
           </div>
@@ -1217,13 +1263,39 @@ def dashboard_overview():
     # Ensure database exists and has tables
     try:
         # Initialize database to create tables if they don't exist
-        from src.database import Database
-        db = Database()
-        db.close()
+        try:
+            from src.database import Database
+            db = Database()
+            db.close()
+        except Exception as db_init_error:
+            logger.error(f"Failed to initialize database: {db_init_error}")
+            # Continue with defaults - database might not be set up yet
+            return render_template_string(
+                HOME_TEMPLATE,
+                total_replied=0,
+                total_tweets_posted=0,
+                total_quote_retweets=0,
+                last_reply=None,
+                recent_replies=[],
+                has_twitter=has_twitter,
+            )
         
         # Now query the database
-        conn = get_db_connection()
-        cur = conn.conn.cursor()
+        try:
+            conn = get_db_connection()
+            cur = conn.conn.cursor()
+        except Exception as conn_error:
+            logger.error(f"Failed to get database connection: {conn_error}")
+            # Return with defaults if connection fails
+            return render_template_string(
+                HOME_TEMPLATE,
+                total_replied=0,
+                total_tweets_posted=0,
+                total_quote_retweets=0,
+                last_reply=None,
+                recent_replies=[],
+                has_twitter=has_twitter,
+            )
         
         # Tables are created by Database class, no need to create here
         
@@ -1315,11 +1387,19 @@ def dashboard_overview():
             traceback.print_exc()
             recent_replies = []
         
-        cur.close()
-        # Don't close the global database connection
+            cur.close()
+            # Don't close the global database connection
+        except Exception as query_error:
+            logger.error(f"Database query error: {query_error}", exc_info=True)
+            # Use defaults for this query
+            total_replied = 0
+            total_tweets_posted = 0
+            total_quote_retweets = 0
+            last_reply = None
+            recent_replies = []
     except Exception as e:
         # If database operations fail, log the error but use defaults
-        print(f"Database error in dashboard: {e}")
+        logger.error(f"Database error in dashboard: {e}", exc_info=True)
         import traceback
         traceback.print_exc()
         # Use defaults to prevent page crash
@@ -1626,7 +1706,6 @@ def _run_bot_in_thread():
         with bot_status_lock:
             bot_status["bot_instance"] = bot
         
-        # Run bot once
         stats = bot.run()
         
         with bot_status_lock:
@@ -1652,6 +1731,7 @@ def _start_scheduler():
         scheduler = BotScheduler(
             bot.run,
             bot.post_tweet,
+            bot.post_thread_tweet,
             config.get_schedule_config(),
             config.get_tweet_settings()
         )
@@ -1760,7 +1840,7 @@ def settings_automation():
                         thread = threading.Thread(target=_run_bot_in_thread, daemon=True)
                         thread.start()
                         logger.info("Started 'run once' thread")
-                        flash("Running bot once... This may take 1-5 minutes. Check logs for progress.", "info")
+                        flash("Bot run started. Check your Twitter account in a few minutes!", "info")
                     except Exception as e:
                         logger.error(f"Error starting run_once: {e}", exc_info=True)
                         bot_status["running"] = False
@@ -1769,14 +1849,27 @@ def settings_automation():
         elif action == "save_schedule":
             data = config.config
             data.setdefault("schedule", {})
-            data["schedule"]["morning_time"] = request.form.get("morning_time", "09:00")
-            data["schedule"]["evening_time"] = request.form.get("evening_time", "18:00")
+            data["schedule"]["morning_start"] = request.form.get("morning_start", "09:00")
+            data["schedule"]["morning_end"] = request.form.get("morning_end", "11:00")
+            data["schedule"]["evening_start"] = request.form.get("evening_start", "18:00")
+            data["schedule"]["evening_end"] = request.form.get("evening_end", "20:00")
+            # Keep backward compatibility
+            data["schedule"]["morning_time"] = data["schedule"]["morning_start"]
+            data["schedule"]["evening_time"] = data["schedule"]["evening_start"]
             data["schedule"]["timezone"] = request.form.get("timezone", "UTC")
             
             data.setdefault("reply_settings", {})
-            data["reply_settings"]["max_replies_per_run"] = int(request.form.get("max_replies_per_run", 10))
-            data["reply_settings"]["delay_minutes_min"] = int(request.form.get("delay_minutes_min", 30))
-            data["reply_settings"]["delay_minutes_max"] = int(request.form.get("delay_minutes_max", 40))
+            data["reply_settings"]["min_replies_per_run"] = int(request.form.get("min_replies_per_run", 20))
+            data["reply_settings"]["max_replies_per_run"] = int(request.form.get("max_replies_per_run", 50))
+            data["reply_settings"]["delay_minutes_min"] = int(request.form.get("delay_minutes_min", 5))
+            data["reply_settings"]["delay_minutes_max"] = int(request.form.get("delay_minutes_max", 15))
+            
+            data.setdefault("tweet_settings", {})
+            data["tweet_settings"]["enabled"] = True
+            data["tweet_settings"]["tweets_per_run"] = int(request.form.get("tweets_per_run", 1))
+            data["tweet_settings"]["thread_enabled"] = True
+            data["tweet_settings"]["threads_per_run"] = int(request.form.get("threads_per_run", 0))
+            data["tweet_settings"]["thread_tweet_count"] = int(request.form.get("thread_tweet_count", 3))
             
             Path(config.config_path).write_text(
                 json.dumps(data, indent=2), encoding="utf-8"
@@ -1794,10 +1887,12 @@ def settings_automation():
     
     schedule = {}
     reply_settings = {}
+    tweet_settings = {}
     
     if config:
         schedule = config.get_schedule_config()
         reply_settings = config.get_reply_settings()
+        tweet_settings = config.get_tweet_settings()
     
     with bot_status_lock:
         bot_running = bot_status["running"]
@@ -1809,6 +1904,7 @@ def settings_automation():
         config_error=error,
         schedule=schedule,
         reply_settings=reply_settings,
+        tweet_settings=tweet_settings,
         bot_running=bot_running,
         last_run=last_run,
         next_run=next_run,
@@ -1816,8 +1912,11 @@ def settings_automation():
 
 
 if __name__ == "__main__":
-    # Debug enabled temporarily so we can see errors while developing.
-    # Use a different port to avoid clashing with any older process.
-    app.run(host="127.0.0.1", port=5001, debug=True)
+    # Get port from environment variable (for production) or use default
+    port = int(os.getenv("PORT", 5001))
+    # Only enable debug in development
+    debug = os.getenv("FLASK_DEBUG", "False").lower() == "true"
+    # Use 0.0.0.0 to accept connections from all interfaces (needed for production)
+    app.run(host="0.0.0.0", port=port, debug=debug)
 
 

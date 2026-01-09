@@ -66,11 +66,8 @@ class Config:
                     self.config["gemini"]["enabled"] = gemini_creds["enabled"]
             
             db.close()
-        except Exception as e:
-            # If database loading fails, continue with file/env config
-            import logging
-            logger = logging.getLogger(__name__)
-            logger.debug(f"Could not load credentials from database: {e}")
+        except Exception:
+            pass
     
     def save_to_database(self, force: bool = False) -> None:
         """Save API credentials to database.

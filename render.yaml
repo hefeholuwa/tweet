@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: tweetpy-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python dashboard.py
+    envVars:
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: PORT
+        value: 5000
+      - key: FLASK_DEBUG
+        value: false
+      - key: DB_HOST
+        fromDatabase:
+          name: tweetpy-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: tweetpy-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: tweetpy-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: tweetpy-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: tweetpy-db
+          property: database
+
+databases:
+  - name: tweetpy-db
+    databaseName: twitter
+    user: tweetpy
+
