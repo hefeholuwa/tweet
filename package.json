@@ -1,0 +1,12 @@
+{
+    "name": "tweetpy-root",
+    "version": "1.0.0",
+    "description": "Root proxy for tweetpy Next.js migration",
+    "scripts": {
+        "dev": "npm --prefix dashboard run dev",
+        "build": "npm --prefix dashboard run build",
+        "start": "npm --prefix dashboard run start",
+        "worker": "npm --prefix dashboard run worker",
+        "bot": "npm --prefix dashboard run headless"
+    }
+}

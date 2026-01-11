@@ -1,0 +1,54 @@
+name: Bot Run (Scheduled)
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Every hour
+  workflow_dispatch: # Allows manual triggering from GitHub UI
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    # Give the action permission to push back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: 🛒 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Get all history so we can push back
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm install && npm --prefix dashboard install
+
+      - name: 🤖 Run Bot (Headless)
+        run: npm run bot
+        env:
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          BYTEZ_API_KEY: ${{ secrets.BYTEZ_API_KEY }}
+          BYTEZ_ENABLED: "true"
+          BOT_RUNNING: "true"
+
+      - name: 💾 Persist State (Git-as-a-DB)
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "bot@github.com"
+          git add activity.json replied_ids.json
+
+          # Only commit and push if files actually changed
+          if git diff --staged --quiet; then
+            echo "No changes to state files. Skipping commit."
+          else
+            git commit -m "🤖 Update activity logs [skip ci]"
+            git push origin main
+          fi
