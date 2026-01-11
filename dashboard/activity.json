@@ -1,5 +1,15 @@
 [
   {
+    "id": "s26z0r",
+    "text": "Next.js tip: Server components are a game-changer. They offload work to the server, boosting performance without rewriting your app. 🚀 #NextJS #PerformanceTips",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Next.js tips",
+    "timestamp": "2026-01-11T21:27:17.247Z",
+    "status": "posted",
+    "tweetId": "2010463549223752025"
+  },
+  {
     "id": "1xds3r",
     "text": "Did you know? Using `as const` in TypeScript turns string literals into literal types, preventing accidental type changes. It's a small trick with big impact! #TypeScript #TypeScriptTips",
     "type": "tweet",
