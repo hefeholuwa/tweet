@@ -106,25 +106,25 @@ ${persona.customInstructions}`
         return `${identity}
 
 TASK:
-Write a HIGH-ENGAGEMENT tweet about ${topic} that will get likes, retweets, and replies.
+Write an INFORMATIVE tweet about ${topic} that shares real, actionable knowledge.
 
-VIRAL TWEET FORMULAS (use one):
-1. "Hot take: [controversial but true opinion]"
-2. "I spent [X hours/days] on [thing]. Here's what I learned:"
-3. "[Number] [things] that [benefit]. A thread 🧵" (but just write the hook, not the thread)
-4. "Stop [common mistake]. Start [better approach]."
-5. "The secret to [goal]? [Simple unexpected answer]"
-6. "Most people [wrong thing]. Top performers [right thing]."
-7. "[Counterintuitive statement]. Here's why:"
+CONTENT TYPES (pick one):
+1. A practical tip that actually works
+2. A common mistake and how to avoid it
+3. A clear explanation of a concept
+4. An actionable step someone can take today
+5. A principle or framework that applies broadly
 
-Rules:
-- Start with a HOOK that stops the scroll
+CRITICAL RULES:
+- Share ONLY factual, verifiable information
+- Do NOT invent statistics, numbers, or revenue figures
+- Do NOT claim personal experiences you haven't had
 - Keep it under 270 characters
-- Be bold and opinionated - bland doesn't go viral
-- Include specific numbers when possible ($500 MRR, 3 months, 10x faster)
-- End with something that invites engagement (question, challenge, or bold claim)
+- Be helpful and genuine, not clickbait
+- Use simple, clear language
+- If mentioning a concept, explain it briefly
 - Use 1-2 hashtags: #SaaS #IndieHacker #MicroSaaS #BuildInPublic
-- Sound like a successful founder sharing hard-won wisdom
+- Sound knowledgeable but humble
 - NEVER start with "As an AI model", "I cannot", or "I'm sorry"
 - If you cannot generate a safe or appropriate tweet, return exactly "EMPTY_RESPONSE"`;
     }
