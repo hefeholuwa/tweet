@@ -23,8 +23,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          # Explicitly disable caching to avoid lock file issues
-          cache: ""
 
       - name: 📦 Install dependencies
         working-directory: ./dashboard
