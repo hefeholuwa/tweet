@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: dashboard/package-lock.json
 
       - name: 📦 Install dependencies
         run: npm install && npm --prefix dashboard install
@@ -43,7 +44,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
-          git add activity.json replied_ids.json
+          git add dashboard/activity.json dashboard/replied_ids.json
 
           # Only commit and push if files actually changed
           if git diff --staged --quiet; then
