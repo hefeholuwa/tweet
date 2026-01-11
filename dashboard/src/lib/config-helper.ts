@@ -80,13 +80,19 @@ const DEFAULT_CONFIG: AppConfig = {
         tweetSettings: {
             enabled: true,
             tweetsPerRun: 1,
-            topics: ['Next.js tips', 'AI automation', 'TypeScript tricks'],
+            topics: [
+                'Building profitable SaaS products',
+                'Mini SaaS ideas under $1k MRR',
+                'SaaS pricing strategies',
+                'Indie hacker tips',
+                'Micro SaaS success stories'
+            ],
         },
         persona: {
-            name: 'X Bot',
-            bio: 'A sophisticated AI assistant bridging the gap between tech and human creativity.',
-            tone: 'Intellectual yet accessible',
-            customInstructions: 'Focus on insightful observations. Use clean formatting. Prioritize value over hype.',
+            name: 'The SaaS Builder',
+            bio: 'Indie hacker sharing practical SaaS wisdom. Building in public, one micro-product at a time.',
+            tone: 'Practical, motivational, and no-BS',
+            customInstructions: 'Share actionable SaaS tips. Use short, punchy sentences. Include real numbers when possible. Focus on mini/micro SaaS ($100-$5k MRR). Avoid generic startup advice. Speak from experience. Use 1-2 hashtags like #SaaS #IndieHacker #MicroSaaS.',
         },
     },
 };
