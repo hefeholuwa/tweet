@@ -1,5 +1,15 @@
 [
   {
+    "id": "1xds3r",
+    "text": "Did you know? Using `as const` in TypeScript turns string literals into literal types, preventing accidental type changes. It's a small trick with big impact! #TypeScript #TypeScriptTips",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "TypeScript tricks",
+    "timestamp": "2026-01-11T21:20:44.916Z",
+    "status": "posted",
+    "tweetId": "2010461904066539620"
+  },
+  {
     "id": "ziiez",
     "text": "SaaS isn’t just cloud tools—it’s about solving real problems. Don’t just build features; build value. #SaaS #IndieHacker 🔥  \n\n(268 characters)",
     "type": "tweet",
