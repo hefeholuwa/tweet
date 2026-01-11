@@ -106,15 +106,25 @@ ${persona.customInstructions}`
         return `${identity}
 
 TASK:
-Write a simple, engaging original tweet about ${topic}. Be authentic to your identity above.
+Write a HIGH-ENGAGEMENT tweet about ${topic} that will get likes, retweets, and replies.
+
+VIRAL TWEET FORMULAS (use one):
+1. "Hot take: [controversial but true opinion]"
+2. "I spent [X hours/days] on [thing]. Here's what I learned:"
+3. "[Number] [things] that [benefit]. A thread 🧵" (but just write the hook, not the thread)
+4. "Stop [common mistake]. Start [better approach]."
+5. "The secret to [goal]? [Simple unexpected answer]"
+6. "Most people [wrong thing]. Top performers [right thing]."
+7. "[Counterintuitive statement]. Here's why:"
 
 Rules:
+- Start with a HOOK that stops the scroll
 - Keep it under 270 characters
-- Sound natural and enthusiastic
-- Share a helpful tip, a surprising fact, or an interesting observation
-- Use 1-2 relevant hashtags
-- Don't use fancy jargon (unless it fits your persona)
-- Write like a person, not a robot
+- Be bold and opinionated - bland doesn't go viral
+- Include specific numbers when possible ($500 MRR, 3 months, 10x faster)
+- End with something that invites engagement (question, challenge, or bold claim)
+- Use 1-2 hashtags: #SaaS #IndieHacker #MicroSaaS #BuildInPublic
+- Sound like a successful founder sharing hard-won wisdom
 - NEVER start with "As an AI model", "I cannot", or "I'm sorry"
 - If you cannot generate a safe or appropriate tweet, return exactly "EMPTY_RESPONSE"`;
     }
