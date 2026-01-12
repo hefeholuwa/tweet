@@ -41,6 +41,7 @@ jobs:
           BOT_RUNNING: "true"
 
       - name: 💾 Persist State (Git-as-a-DB)
+        continue-on-error: true
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
