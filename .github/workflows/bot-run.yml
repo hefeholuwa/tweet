@@ -2,7 +2,7 @@ name: Bot Run (Scheduled)
 
 on:
   schedule:
-    - cron: "0 * * * *" # Every hour
+    - cron: "0 */2 * * *" # Every 2 hours = 12 tweets/day (under the 17/day limit)
   workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:
