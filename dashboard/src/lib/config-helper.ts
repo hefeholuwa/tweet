@@ -46,7 +46,7 @@ export interface AppConfig {
     };
 }
 
-const CONFIG_PATH = "/Users/user/Desktop/PROJECT 0/tweetpy/dashboard/config.json";
+const CONFIG_PATH = path.join(process.cwd(), 'config.json');
 
 const DEFAULT_CONFIG: AppConfig = {
     x: {
