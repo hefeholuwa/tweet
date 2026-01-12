@@ -188,12 +188,12 @@ CRITICAL RULES:
         // 1. Remove ANY content between <think> tags (including tags themselves)
         cleaned = cleaned.replace(/<think>[\s\S]*?<\/think>/gi, '');
 
-        // 2. If there's an opening <think> but no closing, strip everything after it
+        // 2. If there's an opening <think> but no closing, strip everything from <think> onwards
         if (cleaned.toLowerCase().includes('<think>')) {
             cleaned = cleaned.split(/<think>/i)[0];
         }
 
-        // 3. If there's a stray closing </think>, strip everything before it
+        // 3. If there's a stray closing </think>, take only what comes after
         if (cleaned.toLowerCase().includes('</think>')) {
             cleaned = cleaned.split(/<\/think>/i).pop() || '';
         }
@@ -204,11 +204,30 @@ CRITICAL RULES:
         const reasoningPhrases = [
             'okay, the user', 'let me start', 'the user wants', 'first, i need',
             'i should think', 'let me think', 'hmm,', 'alright,', 'so the user',
-            'i will write', 'i will generate', 'here is a tweet'
+            'i will write', 'i will generate', 'here is a tweet', 'i need to',
+            'the tweet should', 'let\'s create', 'i\'ll write', 'now, let me',
+            'first,', 'okay,', 'so,', 'well,', 'now,', 'thinking about',
+            'let me craft', 'i\'m going to', 'the user is asking'
         ];
         const lowerCleaned = cleaned.toLowerCase();
         if (reasoningPhrases.some(phrase => lowerCleaned.startsWith(phrase))) {
+            console.log(`[AI] Detected leaked reasoning, rejecting: "${cleaned.substring(0, 50)}..."`);
             return ''; // This is reasoning, not a tweet
+        }
+
+        // Also check if the content looks like it contains meta-commentary
+        if (lowerCleaned.includes('(268 characters)') ||
+            lowerCleaned.includes('characters)') ||
+            lowerCleaned.includes('word count') ||
+            lowerCleaned.includes('here\'s the tweet')) {
+            // Try to extract just the tweet content before any meta-commentary
+            const metaMatch = cleaned.match(/^(.+?)\s*\([0-9]+ characters?\)/i);
+            if (metaMatch) {
+                cleaned = metaMatch[1].trim();
+            } else {
+                // Remove the meta-commentary
+                cleaned = cleaned.replace(/\s*\([0-9]+ characters?\)/gi, '').trim();
+            }
         }
 
         // Remove any remaining HTML/XML tags
@@ -219,10 +238,16 @@ CRITICAL RULES:
         if (cleaned.startsWith("'") && cleaned.endsWith("'")) cleaned = cleaned.slice(1, -1);
 
         // Remove lead-ins like "Tweet: " or "Here is your tweet:"
-        cleaned = cleaned.replace(/^(tweet|post|here is a tweet|here's a tweet|here is a post):/i, '').trim();
+        cleaned = cleaned.replace(/^(tweet|post|here is a tweet|here's a tweet|here is a post|here's the tweet|output):/i, '').trim();
 
         // Clean markdown formatting
-        cleaned = cleaned.replace(/\*\*/g, '').replace(/\*\*/g, '').replace(/\*/g, '').replace(/_/g, '');
+        cleaned = cleaned.replace(/\*\*/g, '').replace(/\*/g, '').replace(/_/g, '');
+
+        // Final check: if still contains obvious reasoning markers anywhere, reject
+        if (lowerCleaned.includes('the user') || lowerCleaned.includes('i will') || lowerCleaned.includes('i should')) {
+            console.log(`[AI] Content still contains reasoning markers, rejecting`);
+            return '';
+        }
 
         // Truncate if too long
         if (cleaned.length > 280) {

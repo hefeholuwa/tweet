@@ -209,23 +209,30 @@ export class Bot {
                 this.saveState();
 
                 console.log(`[OriginalTweet] Step 3: Posting to X...`);
-                const tweetId = await this.xApi.postTweet(tweetText);
 
-                if (tweetId) {
-                    activity.tweetId = tweetId;
-                    activity.status = 'posted';
-                    console.log(`[OriginalTweet] SUCCESS: Posted and updated activity ${activity.id}`);
-                } else {
-                    // Check if it was a rate limit
-                    if (this.xApi.isRateLimited()) {
-                        activity.status = 'rate-limited';
-                        activity.error = 'Twitter API Rate Limit';
-                        console.log(`[OriginalTweet] RATE LIMITED: Post skipped/failed for activity ${activity.id}`);
+                try {
+                    const tweetId = await this.xApi.postTweet(tweetText);
+
+                    if (tweetId) {
+                        activity.tweetId = tweetId;
+                        activity.status = 'posted';
+                        console.log(`[OriginalTweet] SUCCESS: Posted with ID ${tweetId}`);
                     } else {
-                        activity.status = 'failed';
-                        activity.error = 'Rejected by Twitter (Duplicate or Permission)';
-                        console.log(`[OriginalTweet] FAILED: Post failed for activity ${activity.id}`);
+                        // Check if it was a rate limit
+                        if (this.xApi.isRateLimited()) {
+                            activity.status = 'rate-limited';
+                            activity.error = 'Twitter API Rate Limit';
+                            console.log(`[OriginalTweet] RATE LIMITED: Post skipped for activity ${activity.id}`);
+                        } else {
+                            activity.status = 'failed';
+                            activity.error = 'Rejected by Twitter (Duplicate or Permission)';
+                            console.log(`[OriginalTweet] FAILED: Post rejected for activity ${activity.id}`);
+                        }
                     }
+                } catch (postError: any) {
+                    activity.status = 'failed';
+                    activity.error = postError.message || 'Unknown posting error';
+                    console.error(`[OriginalTweet] EXCEPTION during post: ${activity.error}`);
                 }
                 this.saveState();
             } else {
@@ -257,20 +264,29 @@ export class Bot {
             this.saveState();
 
             console.log(`[Reply] Posting reply to X...`);
-            const replyId = await this.xApi.postReply(replyText, tweet.id);
-            if (replyId) {
-                activity.replyId = replyId;
-                activity.status = 'posted';
-                this.repliedIds.add(tweet.id);
-                console.log(`Successfully replied to ${tweet.id} with ${replyId}`);
-            } else {
-                if (this.xApi.isRateLimited()) {
-                    activity.status = 'rate-limited';
-                    console.log(`Rate limited while replying to ${tweet.id}`);
+
+            try {
+                const replyId = await this.xApi.postReply(replyText, tweet.id);
+                if (replyId) {
+                    activity.replyId = replyId;
+                    activity.status = 'posted';
+                    this.repliedIds.add(tweet.id);
+                    console.log(`[Reply] SUCCESS: Replied to ${tweet.id} with ${replyId}`);
                 } else {
-                    activity.status = 'failed';
-                    console.log(`Failed to post reply to ${tweet.id}`);
+                    if (this.xApi.isRateLimited()) {
+                        activity.status = 'rate-limited';
+                        activity.error = 'Twitter API Rate Limit';
+                        console.log(`[Reply] RATE LIMITED: Reply to ${tweet.id} skipped`);
+                    } else {
+                        activity.status = 'failed';
+                        activity.error = 'Rejected by Twitter';
+                        console.log(`[Reply] FAILED: Reply to ${tweet.id} rejected`);
+                    }
                 }
+            } catch (replyError: any) {
+                activity.status = 'failed';
+                activity.error = replyError.message || 'Unknown reply error';
+                console.error(`[Reply] EXCEPTION: ${activity.error}`);
             }
             this.saveState();
         } else {
