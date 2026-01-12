@@ -44,13 +44,37 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@github.com"
+
+          # Check if there are changes to commit
           git add dashboard/activity.json dashboard/replied_ids.json
 
-          # Only commit and push if files actually changed
           if git diff --staged --quiet; then
             echo "No changes to state files. Skipping commit."
-          else
-            git commit -m "🤖 Update activity logs [skip ci]"
-            git pull --rebase origin main
-            git push origin main
+            exit 0
           fi
+
+          # Stash the changes temporarily
+          git stash
+
+          # Pull latest from remote
+          git pull origin main
+
+          # Re-apply our changes
+          git stash pop
+
+          # Add and commit
+          git add dashboard/activity.json dashboard/replied_ids.json
+          git commit -m "🤖 Update activity logs [skip ci]"
+
+          # Push with retry
+          for i in 1 2 3; do
+            if git push origin main; then
+              echo "Push successful!"
+              exit 0
+            fi
+            echo "Push failed, attempt $i. Pulling and retrying..."
+            git pull --rebase origin main
+          done
+
+          echo "Failed to push after 3 attempts"
+          exit 1
