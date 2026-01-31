@@ -1,5 +1,15 @@
 [
   {
+    "id": "3bl5",
+    "text": "Avoid feature overload. Start small, solve one problem, then scale. Micro SaaS thrives on simplicity. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-01-31T20:14:39.217Z",
+    "status": "posted",
+    "tweetId": "2017693027658306010"
+  },
+  {
     "id": "1lhr4k",
     "text": "Test demand before building. Create a landing page or survey to validate your mini SaaS idea. 30 days of data = 10x lower risk. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
