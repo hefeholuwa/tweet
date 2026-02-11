@@ -1,5 +1,15 @@
 [
   {
+    "id": "2b052",
+    "text": "🚀 Starting your Indie SaaS? Keep your focus on 3 key features: a killer landing page (under $1k), super easy sign-up (10 steps max), and outstanding customer support (reply rate >80%). 🚀 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-02-11T06:50:43.647Z",
+    "status": "posted",
+    "tweetId": "2021476979263057970"
+  },
+  {
     "id": "m0lub1",
     "text": "\"Focus on the first 100 customers. They validate your product, not just your idea.",
     "type": "tweet",
@@ -977,13 +987,5 @@
     "source": "original",
     "keyword": "tech startup",
     "timestamp": "2026-01-10T09:51:31.333Z"
-  },
-  {
-    "id": "57ajfu",
-    "text": "Did you know? The SaaS market is projected to reach $114B by 2027! As the industry continues to grow, it's essential to prioritize security, scalability, and user experience. What's your favorite SaaS tool that's making your workflow more efficient? #SaaS #SoftwareAsAService",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "saas",
-    "timestamp": "2026-01-10T09:46:25.167Z"
   }
 ]
