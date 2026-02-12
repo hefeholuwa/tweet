@@ -1,5 +1,15 @@
 [
   {
+    "id": "8mogt8",
+    "text": "🚀 Discover the secret sauce behind Micro SaaS success! Focus on delivering value, not just features. Start small & iterate fast—your users will thank you. 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Micro SaaS success stories",
+    "timestamp": "2026-02-12T08:33:22.200Z",
+    "status": "posted",
+    "tweetId": "2021865197921767901"
+  },
+  {
     "id": "zl7ddl",
     "text": "🚀 Start your day by focusing on 3 key features you want to launch this week. Prioritize MVPs over fancy features. It's okay to fail, just learn from it! 🚀 #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -978,16 +988,5 @@
     "source": "search",
     "keyword": "AI tech",
     "timestamp": "2026-01-10T09:51:39.028Z"
-  },
-  {
-    "id": "5m48y",
-    "tweetId": "2009925972548608430",
-    "replyId": "2009926076630282572",
-    "authorUsername": "i_love91079",
-    "text": "@i_love91079 @ilove91079 I've been thinking about this too - what are your thoughts on the intersection of Web3 and the real world?",
-    "type": "reply",
-    "source": "search",
-    "keyword": "AI tech",
-    "timestamp": "2026-01-10T09:51:34.049Z"
   }
 ]
