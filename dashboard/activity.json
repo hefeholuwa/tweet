@@ -1,5 +1,15 @@
 [
   {
+    "id": "vxjynh",
+    "text": "🚀 Want to grow your $1k SaaS? Focus on user retention first. Retain 1% more users each month for 6 months and see your MRR grow by 66%! 📈 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-02-12T10:34:03.611Z",
+    "status": "posted",
+    "tweetId": "2021895570688774319"
+  },
+  {
     "id": "8mogt8",
     "text": "🚀 Discover the secret sauce behind Micro SaaS success! Focus on delivering value, not just features. Start small & iterate fast—your users will thank you. 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -977,16 +987,5 @@
     "source": "search",
     "keyword": "AI tech",
     "timestamp": "2026-01-10T09:51:48.170Z"
-  },
-  {
-    "id": "gsr546",
-    "tweetId": "2009925965225619486",
-    "replyId": "2009926097404665945",
-    "authorUsername": "pookieXBT",
-    "text": "@pookieXBT Looks like @WeexCn is hosting an AI trading challenge! 10 lucky participants will win $20 USDT on Jan 15th. Should be interesting to see how it goes down!",
-    "type": "reply",
-    "source": "search",
-    "keyword": "AI tech",
-    "timestamp": "2026-01-10T09:51:39.028Z"
   }
 ]
