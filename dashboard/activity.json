@@ -1,5 +1,15 @@
 [
   {
+    "id": "zltzmn",
+    "text": "Mini SaaS idea: Time tracking for freelancers. 3-minute setup, $100 MRR. Solve \"I waste 5 hours a week on admin.\" Build in public. #SaaS #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-02-18T18:37:31.870Z",
+    "status": "posted",
+    "tweetId": "2024191567444025780"
+  },
+  {
     "id": "gllmqd",
     "text": "Research competitors' pricing and set yours 10-20% higher. That’s how micro SaaS startups like mine hit $1k+ MRR. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -978,13 +988,5 @@
     "source": "original",
     "keyword": "saas",
     "timestamp": "2026-01-10T18:50:59.077Z"
-  },
-  {
-    "id": "mep35q",
-    "text": "Next.js 13’s Server Components are a game-changer—split UI between client and server for lightning-fast performance. Pro tip: Use them for data-heavy pages. 🚀 #NextJS #WebDev",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Next.js tips",
-    "timestamp": "2026-01-10T14:01:33.258Z"
   }
 ]
