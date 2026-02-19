@@ -1,5 +1,15 @@
 [
   {
+    "id": "4qsynp",
+    "text": "Start with a problem you know. Build a time tracking tool for freelancers ($20/month). 50 customers =",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-02-19T18:38:27.520Z",
+    "status": "posted",
+    "tweetId": "2024554188798402562"
+  },
+  {
     "id": "x0qxt",
     "text": "Focus on the first 30 days of onboarding. 70% of customer success happens here. Prioritize training, support, and clear value. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -982,13 +992,5 @@
     "source": "original",
     "keyword": "tech startup",
     "timestamp": "2026-01-10T19:53:15.136Z"
-  },
-  {
-    "id": "d9auo",
-    "text": "AI automation is the future, but here's the twist: It's not just robots—it's human-like efficiency. Automation frees time for creativity. Did you know 70% of tasks can be automated? #AIautomation #FutureOfWork 🤖💡",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "AI automation",
-    "timestamp": "2026-01-10T19:22:58.798Z"
   }
 ]
