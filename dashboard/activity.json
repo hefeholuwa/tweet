@@ -1,5 +1,15 @@
 [
   {
+    "id": "ja5ecw",
+    "text": "Build a tool for content creators that automates video editing. Target $10/month with 100 customers = $1k MRR. Focus on solving a specific problem, not trying to do everything. #SaaS #Indie",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-02-20T04:05:43.956Z",
+    "status": "posted",
+    "tweetId": "2024696948029374968"
+  },
+  {
     "id": "4qsynp",
     "text": "Start with a problem you know. Build a time tracking tool for freelancers ($20/month). 50 customers =",
     "type": "tweet",
@@ -984,13 +994,5 @@
     "source": "original",
     "keyword": "saas",
     "timestamp": "2026-01-10T20:26:20.187Z"
-  },
-  {
-    "id": "6rner",
-    "text": "Startup hacks: Ship early, iterate fast, and don’t fear the chaos. AI’s not magic—it’s a tool. Build for real people, not just algorithms. 🚀 #IndieHacker #AI",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "tech startup",
-    "timestamp": "2026-01-10T19:53:15.136Z"
   }
 ]
