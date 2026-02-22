@@ -1,5 +1,15 @@
 [
   {
+    "id": "3cyx8p",
+    "text": "Focus on reducing churn. 10% is healthy. Improve onboarding & support to keep customers. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-02-22T20:14:36.333Z",
+    "status": "posted",
+    "tweetId": "2025665548244390275"
+  },
+  {
     "id": "3xaxxv",
     "text": "\"Don't let CAC > LTV. Aim for LTV:CAC ratio of 3:1. Real numbers show",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-11T21:27:17.247Z",
     "status": "posted",
     "tweetId": "2010463549223752025"
-  },
-  {
-    "id": "1xds3r",
-    "text": "Did you know? Using `as const` in TypeScript turns string literals into literal types, preventing accidental type changes. It's a small trick with big impact! #TypeScript #TypeScriptTips",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "TypeScript tricks",
-    "timestamp": "2026-01-11T21:20:44.916Z",
-    "status": "posted",
-    "tweetId": "2010461904066539620"
   }
 ]
