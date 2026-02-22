@@ -1,5 +1,15 @@
 [
   {
+    "id": "fqfqir",
+    "text": "Prioritize retention over acquisition. 1% churn beats 5% growth. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-02-22T22:13:23.442Z",
+    "status": "posted",
+    "tweetId": "2025695441761820983"
+  },
+  {
     "id": "3cyx8p",
     "text": "Focus on reducing churn. 10% is healthy. Improve onboarding & support to keep customers. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-11T22:28:01.310Z",
     "status": "posted",
     "tweetId": "2010478833292714144"
-  },
-  {
-    "id": "s26z0r",
-    "text": "Next.js tip: Server components are a game-changer. They offload work to the server, boosting performance without rewriting your app. 🚀 #NextJS #PerformanceTips",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Next.js tips",
-    "timestamp": "2026-01-11T21:27:17.247Z",
-    "status": "posted",
-    "tweetId": "2010463549223752025"
   }
 ]
