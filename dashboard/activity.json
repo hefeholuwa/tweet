@@ -1,5 +1,15 @@
 [
   {
+    "id": "3xaxxv",
+    "text": "\"Don't let CAC > LTV. Aim for LTV:CAC ratio of 3:1. Real numbers show",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-02-22T14:17:28.922Z",
+    "status": "posted",
+    "tweetId": "2025575675265183883"
+  },
+  {
     "id": "15vmog",
     "text": "Proactive communication reduces churn. Schedule weekly check-ins with customers to build trust and spot issues early. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,14 +998,5 @@
     "timestamp": "2026-01-11T21:20:44.916Z",
     "status": "posted",
     "tweetId": "2010461904066539620"
-  },
-  {
-    "id": "ziiez",
-    "text": "SaaS isn’t just cloud tools—it’s about solving real problems. Don’t just build features; build value. #SaaS #IndieHacker 🔥  \n\n(268 characters)",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "saas",
-    "timestamp": "2026-01-10T22:54:13.714Z",
-    "status": "rate-limited"
   }
 ]
