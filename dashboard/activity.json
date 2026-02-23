@@ -1,5 +1,15 @@
 [
   {
+    "id": "ilas4c",
+    "text": "Start with one product tier. Use 10-50% pricing for upgrades. Avoid overcomplicating. Focus on value. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-02-23T22:30:30.744Z",
+    "status": "posted",
+    "tweetId": "2026062138737881489"
+  },
+  {
     "id": "x8y257",
     "text": "Mini SaaS under $1k MRR: Focus on a specific problem you solve daily. Example: Time-tracking for remote teams. Build a free version, test with 10 users. Scale if it works. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-12T11:28:11.498Z",
     "status": "posted",
     "tweetId": "2010675169581285409"
-  },
-  {
-    "id": "casty",
-    "text": "🚀 Start small! Build a micro-SaaS app for $500 or less. Focus on solving a specific pain point & gather 100 users. Scale fast with their feedback! 💪 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-12T08:43:17.655Z",
-    "status": "posted",
-    "tweetId": "2010633671691133080"
   }
 ]
