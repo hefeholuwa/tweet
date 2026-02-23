@@ -1,5 +1,15 @@
 [
   {
+    "id": "x8y257",
+    "text": "Mini SaaS under $1k MRR: Focus on a specific problem you solve daily. Example: Time-tracking for remote teams. Build a free version, test with 10 users. Scale if it works. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-02-23T18:47:48.051Z",
+    "status": "posted",
+    "tweetId": "2026006091021320696"
+  },
+  {
     "id": "aeveoo",
     "text": "Test your SaaS idea with a 30-day free trial to avoid building something no one wants. Start small, focus on solving a real problem. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-12T08:43:17.655Z",
     "status": "posted",
     "tweetId": "2010633671691133080"
-  },
-  {
-    "id": "ww42g5",
-    "text": "Creating a profitable SaaS? Start by focusing on solving a specific pain point. Know your target audience inside out—dozens not thousands! #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-12T07:35:19.697Z",
-    "status": "posted",
-    "tweetId": "2010616567478747615"
   }
 ]
