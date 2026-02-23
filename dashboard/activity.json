@@ -1,5 +1,15 @@
 [
   {
+    "id": "aeveoo",
+    "text": "Test your SaaS idea with a 30-day free trial to avoid building something no one wants. Start small, focus on solving a real problem. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-02-23T10:39:51.982Z",
+    "status": "posted",
+    "tweetId": "2025883298585797077"
+  },
+  {
     "id": "zb9hn8",
     "text": "Micro SaaS success: A niche tool solving one problem hit $200k MRR. Focus on a specific pain point, build in public, and scale. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-12T07:35:19.697Z",
     "status": "posted",
     "tweetId": "2010616567478747615"
-  },
-  {
-    "id": "vczphs",
-    "text": "🚀 Building a profitable SaaS? Start with clear value propositions & customer feedback loops. Test before launch, iterate often! 📈🔍 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-12T06:52:31.607Z",
-    "status": "posted",
-    "tweetId": "2010605796699131928"
   }
 ]
