@@ -1,5 +1,15 @@
 [
   {
+    "id": "nxo10j",
+    "text": "Track CAC vs. LTV: If CAC > LTV, you're losing money. Focus on low-cost channels like social media, email lists, or niche forums. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-02-26T08:33:22.044Z",
+    "status": "posted",
+    "tweetId": "2026938627360428409"
+  },
+  {
     "id": "l00oh",
     "text": "\"Focus on solving a specific problem with a simple tool. Example: Time tracking for freelancers ($20/mo, 500 users = $10k/yr). Avoid overcomplicating. Build in public, iterate",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-13T00:50:57.605Z",
     "status": "posted",
     "tweetId": "2010877192817840472"
-  },
-  {
-    "id": "y4r4ab",
-    "text": "Building a profitable SaaS? Start with solving a specific pain point. Offer a unique value proposition that's clearly communicated. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-12T20:14:11.792Z",
-    "status": "posted",
-    "tweetId": "2010807543229284765"
   }
 ]
