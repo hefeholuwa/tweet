@@ -1,5 +1,15 @@
 [
   {
+    "id": "dk2ay",
+    "text": "Start with a \"price guard\" – set a minimum price to avoid underpricing. It helps maintain margins and encourages upgrades. 30% of customers upgrade after the first month. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-03-01T04:12:06.824Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "3psbcq",
     "text": "Focus on retention, not just acquisition. High retention = 3x higher LTV. Prioritize customer satisfaction to build sticky, profitable SaaS. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-13T10:16:08.957Z",
     "status": "posted",
     "tweetId": "2011019427320352859"
-  },
-  {
-    "id": "rinhti",
-    "text": "🚀 Build your SaaS MVP in 3 months! Start by focusing on solving 1 key pain point for $100+ customers. Test & iterate fast. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-13T08:20:44.559Z",
-    "status": "posted",
-    "tweetId": "2010990384667668542"
   }
 ]
