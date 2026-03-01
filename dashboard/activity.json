@@ -1,5 +1,15 @@
 [
   {
+    "id": "3psbcq",
+    "text": "Focus on retention, not just acquisition. High retention = 3x higher LTV. Prioritize customer satisfaction to build sticky, profitable SaaS. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-03-01T01:13:08.925Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "57ae2",
     "text": "Start with $25/day LinkedIn Ads for micro SaaS. Retarget leads, build email lists. 1000+ customers found this way. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-13T08:20:44.559Z",
     "status": "posted",
     "tweetId": "2010990384667668542"
-  },
-  {
-    "id": "br641q",
-    "text": "💰Strategize your SaaS prices by starting with your customer's pain point, then offer tiered plans. Pricing your MVP at $39 vs. $99 shows flexibility & value! 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-13T03:22:40.202Z",
-    "status": "posted",
-    "tweetId": "2010915372715700555"
   }
 ]
