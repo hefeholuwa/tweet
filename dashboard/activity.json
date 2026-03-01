@@ -1,5 +1,15 @@
 [
   {
+    "id": "596e8p",
+    "text": "Focus on solving one specific problem. Build a product that addresses it. Test, iterate, and scale. Micro SaaS success starts with clarity. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-03-01T10:14:37.241Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "dk2ay",
     "text": "Start with a \"price guard\" – set a minimum price to avoid underpricing. It helps maintain margins and encourages upgrades. 30% of customers upgrade after the first month. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-13T22:12:36.691Z",
     "status": "posted",
     "tweetId": "2011199731352125506"
-  },
-  {
-    "id": "qy7cxt",
-    "text": "Start with value-based pricing: calculate your customer’s perceived value, not just costs. Test 3-5 tiers. Use a pricing calculator to avoid underpricing. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-13T10:16:08.957Z",
-    "status": "posted",
-    "tweetId": "2011019427320352859"
   }
 ]
