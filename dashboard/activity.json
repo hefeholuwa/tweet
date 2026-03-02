@@ -1,5 +1,15 @@
 [
   {
+    "id": "2kekp4",
+    "text": "Got $100-$5k MRR? Try the Freemium model: Offer basic features free, charge for advanced ones. It’s worked for over 90% of my clients! #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-03-02T10:34:30.348Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "sijqn",
     "text": "🚀 Building a profitable SaaS? Start by focusing on solving a specific pain point for your target market. Know your niche & offer value, then scale organically. 🚀 #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-14T16:18:07.713Z",
     "status": "posted",
     "tweetId": "2011472910452416833"
-  },
-  {
-    "id": "bq3vj",
-    "text": "\"Don't build a SaaS without validating your idea. Test with 50 real users first. Many micro SaaS fail due to poor demand",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-14T10:15:34.492Z",
-    "status": "posted",
-    "tweetId": "2011381670671159429"
   }
 ]
