@@ -1,5 +1,15 @@
 [
   {
+    "id": "sijqn",
+    "text": "🚀 Building a profitable SaaS? Start by focusing on solving a specific pain point for your target market. Know your niche & offer value, then scale organically. 🚀 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-03-02T06:42:20.907Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "596e8p",
     "text": "Focus on solving one specific problem. Build a product that addresses it. Test, iterate, and scale. Micro SaaS success starts with clarity. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-14T10:15:34.492Z",
     "status": "posted",
     "tweetId": "2011381670671159429"
-  },
-  {
-    "id": "sexqoe4",
-    "text": "🚀 Start small! Ideas under $1k MRR often work best. Try a simple CRM for freelancers (max $500) or a booking tool (max $600). Focus on solving a clear pain point. 📈🔍 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-13T22:12:36.691Z",
-    "status": "posted",
-    "tweetId": "2011199731352125506"
   }
 ]
