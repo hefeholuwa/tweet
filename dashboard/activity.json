@@ -1,5 +1,15 @@
 [
   {
+    "id": "8swox",
+    "text": "Understanding tiered pricing! Charge $5 for the basic plan, $15 for advanced, and $30 for premium. Tailor prices based on feature needs, not just user count. 📊💰 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-03-02T16:30:50.750Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "px2bn",
     "text": "Understanding your customers' willingness to pay is key! Start by offering a free trial for $29, then a $49 plan for 10 users. Scale up to $99 for 50 users. This tiered approach helps gauge value perception. 📊#SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-15T10:14:35.039Z",
     "status": "posted",
     "tweetId": "2011743809802006962"
-  },
-  {
-    "id": "6e30xl",
-    "text": "Building a SaaS? Focus on solving a specific pain point. Targeting 1,000 users means addressing 1,000 unique needs. Start small & iterate! 🚀 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-15T08:18:52.454Z",
-    "status": "posted",
-    "tweetId": "2011714689944736083"
   }
 ]
