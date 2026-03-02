@@ -1,5 +1,15 @@
 [
   {
+    "id": "px2bn",
+    "text": "Understanding your customers' willingness to pay is key! Start by offering a free trial for $29, then a $49 plan for 10 users. Scale up to $99 for 50 users. This tiered approach helps gauge value perception. 📊#SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-03-02T14:36:10.022Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "2kekp4",
     "text": "Got $100-$5k MRR? Try the Freemium model: Offer basic features free, charge for advanced ones. It’s worked for over 90% of my clients! #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-15T08:18:52.454Z",
     "status": "posted",
     "tweetId": "2011714689944736083"
-  },
-  {
-    "id": "30af0e",
-    "text": "🚀 Start your day by reviewing your top 3 most impactful tasks for the day. Prioritize these and watch your productivity soar! #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Indie hacker tips",
-    "timestamp": "2026-01-14T16:18:07.713Z",
-    "status": "posted",
-    "tweetId": "2011472910452416833"
   }
 ]
