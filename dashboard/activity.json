@@ -1,5 +1,15 @@
 [
   {
+    "id": "794hhb",
+    "text": "Common mistake: pricing too low. Start with 20-30% above costs to ensure profitability. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-03-09T10:34:39.533Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "trjqn",
     "text": "Indie hackers: Focus on 3-step onboarding. Start with 1 core feature, then add value layers. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-16T10:15:28.755Z",
     "status": "posted",
     "tweetId": "2012106422163841180"
-  },
-  {
-    "id": "jky5n",
-    "text": "Build a SaaS that automates repetitive tasks using no-code tools like Zapier. Saves 10+ hours/month for users. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-16T06:19:04.849Z",
-    "status": "posted",
-    "tweetId": "2012046930788897151"
   }
 ]
