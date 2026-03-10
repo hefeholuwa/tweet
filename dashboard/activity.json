@@ -1,5 +1,15 @@
 [
   {
+    "id": "4tvxh4",
+    "text": "Indie hackers often get stuck building the product instead of solving the problem. Start with customer interviews to align your product with their needs. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-03-10T20:21:32.806Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "vihd4",
     "text": "Don't build for the market—build for your customers. Many SaaS failures stem from poor customer fit. Use feedback to pivot early. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-16T22:11:54.252Z",
     "status": "posted",
     "tweetId": "2012286716728721721"
-  },
-  {
-    "id": "yf292j",
-    "text": "Building a profitable SaaS? Start by focusing on solving a specific pain point. Know your customer inside out & offer value beyond features! 🚀 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-16T20:14:34.428Z",
-    "status": "posted",
-    "tweetId": "2012257189541331055"
   }
 ]
