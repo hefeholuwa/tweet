@@ -1,5 +1,15 @@
 [
   {
+    "id": "l6hapq",
+    "text": "Common SaaS pricing mistake: Not segmenting customers. Use tiered pricing (e.g., $100-$5k MRR) to highlight value. Focus on what your customers need, not just features. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-03-12T10:28:20.041Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "4tvxh4",
     "text": "Indie hackers often get stuck building the product instead of solving the problem. Start with customer interviews to align your product with their needs. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-17T12:19:55.180Z",
     "status": "posted",
     "tweetId": "2012500126611439641"
-  },
-  {
-    "id": "sa38gn",
-    "text": "🚀 Dive into pricing strategy by starting with your value proposition. Clearly define what makes your service unique & adjust prices based on customer feedback. 📊 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-16T22:11:54.252Z",
-    "status": "posted",
-    "tweetId": "2012286716728721721"
   }
 ]
