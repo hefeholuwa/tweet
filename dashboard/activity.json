@@ -1,5 +1,15 @@
 [
   {
+    "id": "p0vzyi",
+    "text": "Mini SaaS under $1k MRR: Focus on a specific pain point. Example: $20/mo tool for remote teams tracking tasks. Start simple, iterate fast. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-03-13T06:37:48.278Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "i9aukc",
     "text": "🚀 Starting a micro-SaaS? Focus on 1 key feature first! It's easier to scale from there. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-18T14:11:43.412Z",
     "status": "posted",
     "tweetId": "2012890650749104305"
-  },
-  {
-    "id": "t42rfb",
-    "text": "Focus on customer onboarding. 70% of SaaS churn happens in the first 30 days. Use a 1:1 check-in",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-17T14:10:27.972Z",
-    "status": "posted",
-    "tweetId": "2012527946481664177"
   }
 ]
