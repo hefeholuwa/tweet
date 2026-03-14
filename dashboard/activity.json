@@ -1,5 +1,15 @@
 [
   {
+    "id": "iy2ltcm",
+    "text": "Automate repetitive tasks with Zapier or IFTTT to save 10+ hours/week. Focus on solving a pain point with a $100-$5k MRR micro SaaS. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-03-14T18:21:39.518Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "p0vzyi",
     "text": "Mini SaaS under $1k MRR: Focus on a specific pain point. Example: $20/mo tool for remote teams tracking tasks. Start simple, iterate fast. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-18T16:15:28.379Z",
     "status": "posted",
     "tweetId": "2012921793498017816"
-  },
-  {
-    "id": "c20bm",
-    "text": "🚀 Want to grow your micro-SaaS to $5K+ MRR? Focus on user feedback first! Respond to every review within 48hrs. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Indie hacker tips",
-    "timestamp": "2026-01-18T14:11:43.412Z",
-    "status": "posted",
-    "tweetId": "2012890650749104305"
   }
 ]
