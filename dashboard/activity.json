@@ -1,5 +1,15 @@
 [
   {
+    "id": "h5lobe",
+    "text": "Indie hackers: Offer a 30-day free trial to attract users, then convert with a 10% discount. Pro",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-03-15T08:24:17.096Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "iy2ltcm",
     "text": "Automate repetitive tasks with Zapier or IFTTT to save 10+ hours/week. Focus on solving a pain point with a $100-$5k MRR micro SaaS. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-18T18:16:01.066Z",
     "status": "posted",
     "tweetId": "2012952129728807127"
-  },
-  {
-    "id": "bkic2i",
-    "text": "Value-based pricing: set prices 10-50% above your customer's annual budget. This ensures you capture value without underpricing. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-18T16:15:28.379Z",
-    "status": "posted",
-    "tweetId": "2012921793498017816"
   }
 ]
