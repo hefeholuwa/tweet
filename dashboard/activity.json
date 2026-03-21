@@ -1,5 +1,15 @@
 [
   {
+    "id": "2xkb3i",
+    "text": "Focus on solving a specific problem. Example: Task manager for freelancers at $100 MRR. Build in public, iterate fast. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-03-21T05:00:53.056Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "h5lobe",
     "text": "Indie hackers: Offer a 30-day free trial to attract users, then convert with a 10% discount. Pro",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-18T20:16:07.986Z",
     "status": "posted",
     "tweetId": "2012982357456761330"
-  },
-  {
-    "id": "qx7hz",
-    "text": "🚀 Here’s a secret: Successful micro-SaaS products often focus on solving a single, clear pain point. 🌟 For example, one app grew 50% by adding just 3 features. Start with clarity & simplicity—your users will thank you! 💡 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Micro SaaS success stories",
-    "timestamp": "2026-01-18T18:16:01.066Z",
-    "status": "posted",
-    "tweetId": "2012952129728807127"
   }
 ]
