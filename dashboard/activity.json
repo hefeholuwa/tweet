@@ -1,5 +1,15 @@
 [
   {
+    "id": "ka9vze",
+    "text": "🌟💡 Optimize your SaaS pricing with value-based pricing! Charge based on what customers value most, not just usage. Try starting with $29/month for the most valuable features first. 🚀 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-03-22T14:19:44.619Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "2xkb3i",
     "text": "Focus on solving a specific problem. Example: Task manager for freelancers at $100 MRR. Build in public, iterate fast. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-19T06:26:26.652Z",
     "status": "posted",
     "tweetId": "2013135947244642434"
-  },
-  {
-    "id": "mzyvwp",
-    "text": "🌟 Pricing your SaaS? Start with $9.99/month and increase by $1 every 3 months. Test and adjust based on user feedback. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-18T20:16:07.986Z",
-    "status": "posted",
-    "tweetId": "2012982357456761330"
   }
 ]
