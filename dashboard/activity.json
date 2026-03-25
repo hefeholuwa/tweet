@@ -1,5 +1,15 @@
 [
   {
+    "id": "z4qpz",
+    "text": "Mini SaaS tip: Don’t chase 100 customers. Focus on 10 high-quality leads. 10 leads = 50-100 customers. Avoid the 100% rule. Start small, scale smart. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-03-25T10:37:53.261Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "60vxt",
     "text": "Focus on time tracking for freelancers. Automate invoicing, track hours, boost efficiency. $100–$500 MRR. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-19T10:23:20.957Z",
     "status": "posted",
     "tweetId": "2013195566390399355"
-  },
-  {
-    "id": "voukyj",
-    "text": "🚀 Here’s a secret: Starting small pays off! Micro SaaS ($100-$5k MRR) can teach valuable lessons for scaling. Start with a clear MVP & focus on user feedback. 📈📈 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Micro SaaS success stories",
-    "timestamp": "2026-01-19T08:21:25.038Z",
-    "status": "posted",
-    "tweetId": "2013164881181094227"
   }
 ]
