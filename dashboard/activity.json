@@ -1,5 +1,15 @@
 [
   {
+    "id": "ixk4q",
+    "text": "Don't let CAC outpace LTV",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-04T01:11:11.850Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "g791v",
     "text": "Indie hackers: Use a referral program with 20% commission. It scales fast and boosts MRR by 30%+. Start today. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-20T03:28:43.473Z",
     "status": "posted",
     "tweetId": "2013453610529513587"
-  },
-  {
-    "id": "kcmko8",
-    "text": "Building a profitable SaaS? Start by focusing on your unique value proposition. Know what sets you apart & why customers will pay. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-19T22:12:33.423Z",
-    "status": "posted",
-    "tweetId": "2013374045228847234"
   }
 ]
