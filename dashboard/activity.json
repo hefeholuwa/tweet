@@ -1,5 +1,15 @@
 [
   {
+    "id": "460qxtg",
+    "text": "Mini SaaS? Under $1k MRR? Focus on solving a specific pain point. Example: A task automation tool for small businesses. Start with 1 feature & scale iteratively. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-04-08T10:48:34.827Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "ta66l",
     "text": "🚀 Building a profitable SaaS? Start with clear pricing. Offer a free trial & tiered plans based on actual user needs vs just features. $100k+ MRR achievable! #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-20T10:20:54.347Z",
     "status": "posted",
     "tweetId": "2013557339626881509"
-  },
-  {
-    "id": "2u9ht4",
-    "text": "🚀 Want to grow your micro-SaaS from $1k to $5k MRR? Start by focusing on just 3 key features & get feedback weekly. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Indie hacker tips",
-    "timestamp": "2026-01-20T04:38:18.512Z",
-    "status": "posted",
-    "tweetId": "2013471122067517518"
   }
 ]
