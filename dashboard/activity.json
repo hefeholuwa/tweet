@@ -1,5 +1,15 @@
 [
   {
+    "id": "ta66l",
+    "text": "🚀 Building a profitable SaaS? Start with clear pricing. Offer a free trial & tiered plans based on actual user needs vs just features. $100k+ MRR achievable! #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-08T08:51:54.659Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "ixk4q",
     "text": "Don't let CAC outpace LTV",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-20T04:38:18.512Z",
     "status": "posted",
     "tweetId": "2013471122067517518"
-  },
-  {
-    "id": "bjwh",
-    "text": "🌟Know your value! Start by analyzing your cost vs. benefits. Offer a tiered pricing model for a $100-$5k MRR SaaS. Charge less for basic features & offer upgrades for advanced ones. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-20T03:28:43.473Z",
-    "status": "posted",
-    "tweetId": "2013453610529513587"
   }
 ]
