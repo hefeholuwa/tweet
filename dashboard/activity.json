@@ -1,5 +1,15 @@
 [
   {
+    "id": "5s8rqw",
+    "text": "Build a 100-second MVP for your micro SaaS. Example: Task automation tool for remote teams. Steps: 1) Define problem, 2) Create simple tool, 3) Test with 10 customers. Start small, scale smart. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-04-09T12:56:15.872Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "460qxtg",
     "text": "Mini SaaS? Under $1k MRR? Focus on solving a specific pain point. Example: A task automation tool for small businesses. Start with 1 feature & scale iteratively. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-21T06:23:17.149Z",
     "status": "posted",
     "tweetId": "2013859928507633977"
-  },
-  {
-    "id": "0x6f3",
-    "text": "Start with a single pricing point (e.g., $50/month) to simplify your offering. Focus on value, not complexity",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-20T10:20:54.347Z",
-    "status": "posted",
-    "tweetId": "2013557339626881509"
   }
 ]
