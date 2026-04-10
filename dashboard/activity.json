@@ -1,5 +1,15 @@
 [
   {
+    "id": "heo2wf",
+    "text": "Understanding your customers' pain points is key. Charge for value, not features. Start by offering a basic plan free, then tier up with premium benefits. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-04-10T16:39:54.532Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "nqq55q",
     "text": "🚀 Start your Micro-SaaS journey with a simple pricing model: FREE trial + $9/month plan. It's easy to scale & get real feedback. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-22T18:17:33.196Z",
     "status": "posted",
     "tweetId": "2014402067369009555"
-  },
-  {
-    "id": "sk13c7",
-    "text": "Want to grow your micro-SaaS? Focus on delivering value within the first 30 days. Offer a free trial, add a demo call, and see if it's a fit! #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Indie hacker tips",
-    "timestamp": "2026-01-21T14:22:28.886Z",
-    "status": "posted",
-    "tweetId": "2013980521987035624"
   }
 ]
