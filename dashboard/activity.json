@@ -1,5 +1,15 @@
 [
   {
+    "id": "b2ah3j",
+    "text": "🚀 Pricing your SaaS? Start with $9/month for basic features. Add-ons cost extra, keep it simple & scalable! 📊 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-04-10T04:38:26.880Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "5s8rqw",
     "text": "Build a 100-second MVP for your micro SaaS. Example: Task automation tool for remote teams. Steps: 1) Define problem, 2) Create simple tool, 3) Test with 10 customers. Start small, scale smart. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-21T12:25:52.181Z",
     "status": "posted",
     "tweetId": "2013951175507259397"
-  },
-  {
-    "id": "m83gdq",
-    "text": "Understanding freemium models boosts growth! Offer basic features free, charge for advanced ones. $5/month tier saw a 3x increase in paid sign-ups. Try it out! 🚀 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "SaaS pricing strategies",
-    "timestamp": "2026-01-21T06:23:17.149Z",
-    "status": "posted",
-    "tweetId": "2013859928507633977"
   }
 ]
