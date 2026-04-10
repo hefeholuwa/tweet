@@ -1,5 +1,15 @@
 [
   {
+    "id": "nqq55q",
+    "text": "🚀 Start your Micro-SaaS journey with a simple pricing model: FREE trial + $9/month plan. It's easy to scale & get real feedback. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Mini SaaS ideas under $1k MRR",
+    "timestamp": "2026-04-10T12:43:21.243Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "b2ah3j",
     "text": "🚀 Pricing your SaaS? Start with $9/month for basic features. Add-ons cost extra, keep it simple & scalable! 📊 #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-21T14:22:28.886Z",
     "status": "posted",
     "tweetId": "2013980521987035624"
-  },
-  {
-    "id": "9zy4fc",
-    "text": "💡 Idea for a $1k MRR SaaS: Create a task management tool for freelancers. Charge $9/month for priority inbox support & weekly check-ins. 📲💻 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-21T12:25:52.181Z",
-    "status": "posted",
-    "tweetId": "2013951175507259397"
   }
 ]
