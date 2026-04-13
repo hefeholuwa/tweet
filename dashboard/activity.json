@@ -1,5 +1,15 @@
 [
   {
+    "id": "bbjpm",
+    "text": "Focus on the 20% of customers that generate 80% of revenue. Prioritize high-value users. Use data to segment and retain them. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-13T04:49:03.351Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "heo2wf",
     "text": "Understanding your customers' pain points is key. Charge for value, not features. Start by offering a basic plan free, then tier up with premium benefits. #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-22T22:13:46.786Z",
     "status": "posted",
     "tweetId": "2014461515760337121"
-  },
-  {
-    "id": "jjulur",
-    "text": "Build an email automation tool for small businesses under $1k MRR. Start",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-22T18:17:33.196Z",
-    "status": "posted",
-    "tweetId": "2014402067369009555"
   }
 ]
