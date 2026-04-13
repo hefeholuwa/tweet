@@ -1,5 +1,15 @@
 [
   {
+    "id": "f4ohwe",
+    "text": "Focus on high-intent audiences (70% of SaaS fail due to bad CAC). Use free tools like Google Analytics to find them. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-13T12:57:57.032Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "bbjpm",
     "text": "Focus on the 20% of customers that generate 80% of revenue. Prioritize high-value users. Use data to segment and retain them. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-23T03:28:41.506Z",
     "status": "posted",
     "tweetId": "2014540765834399754"
-  },
-  {
-    "id": "7jzxeb",
-    "text": "🚀 Micro SaaS success? Start small, focus on solving a specific pain point. Real story: Client saw $3k/mo MRR by targeting just 50 users with a killer app for their niche. #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Micro SaaS success stories",
-    "timestamp": "2026-01-22T22:13:46.786Z",
-    "status": "posted",
-    "tweetId": "2014461515760337121"
   }
 ]
