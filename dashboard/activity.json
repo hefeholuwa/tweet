@@ -1,5 +1,15 @@
 [
   {
+    "id": "8bykd",
+    "text": "💰Understand your customers' pain points & tailor prices. For example, if they value flexibility, offer multiple tiers at different price points! 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "SaaS pricing strategies",
+    "timestamp": "2026-04-17T16:42:55.194Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "f4ohwe",
     "text": "Focus on high-intent audiences (70% of SaaS fail due to bad CAC). Use free tools like Google Analytics to find them. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-23T08:18:42.032Z",
     "status": "posted",
     "tweetId": "2014613749043495163"
-  },
-  {
-    "id": "q8kdu",
-    "text": "Build a productivity tool for remote teams: $20/mo, 50 customers = $1k MRR. Focus on automation, not features. Start with a free trial. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-23T03:28:41.506Z",
-    "status": "posted",
-    "tweetId": "2014540765834399754"
   }
 ]
