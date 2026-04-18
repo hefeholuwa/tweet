@@ -1,5 +1,15 @@
 [
   {
+    "id": "v62ae",
+    "text": "🚀 Build your SaaS MVP in 6 weeks! Start with a $100/month price point & focus on solving 1 key pain point. Test, iterate, scale fast! 🚀 #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-18T14:34:56.700Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "8bykd",
     "text": "💰Understand your customers' pain points & tailor prices. For example, if they value flexibility, offer multiple tiers at different price points! 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-24T18:17:43.941Z",
     "status": "posted",
     "tweetId": "2015126888184787423"
-  },
-  {
-    "id": "owfod",
-    "text": "🚀 Build your SaaS with clarity! Start by defining your unique value proposition. Know what makes you stand out to attract customers. 🚀 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-23T08:18:42.032Z",
-    "status": "posted",
-    "tweetId": "2014613749043495163"
   }
 ]
