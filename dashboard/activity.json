@@ -1,5 +1,15 @@
 [
   {
+    "id": "3gnv37",
+    "text": "Track CAC and LTV. If CAC > LTV, you're losing money. Aim for 3x LTV over CAC. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-20T09:51:43.770Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "6mmiq",
     "text": "Start a weekly blog post series on your SaaS journey to get real feedback. Building in public drives growth. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-26T12:25:12.824Z",
     "status": "posted",
     "tweetId": "2015762949747482811"
-  },
-  {
-    "id": "0ppx1",
-    "text": "Creating a micro-SaaS app for $1-10k? Start with solving a specific pain point. Offer a free trial & collect feedback. Scale based on user growth. 🚀 #SaaS #IndieHacker #MicroSaaS",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Mini SaaS ideas under $1k MRR",
-    "timestamp": "2026-01-25T03:46:40.726Z",
-    "status": "posted",
-    "tweetId": "2015270068985233757"
   }
 ]
