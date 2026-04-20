@@ -1,5 +1,15 @@
 [
   {
+    "id": "6mmiq",
+    "text": "Start a weekly blog post series on your SaaS journey to get real feedback. Building in public drives growth. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Indie hacker tips",
+    "timestamp": "2026-04-20T01:27:53.914Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "v62ae",
     "text": "🚀 Build your SaaS MVP in 6 weeks! Start with a $100/month price point & focus on solving 1 key pain point. Test, iterate, scale fast! 🚀 #SaaS #IndieHacker #MicroSaaS",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-25T03:46:40.726Z",
     "status": "posted",
     "tweetId": "2015270068985233757"
-  },
-  {
-    "id": "nt425",
-    "text": "🚀 Want to scale your micro-SaaS to $5k MRR? Start by focusing on 1 key feature & get early adopters. Then iterate based on feedback. 🚀 #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Indie hacker tips",
-    "timestamp": "2026-01-24T18:17:43.941Z",
-    "status": "posted",
-    "tweetId": "2015126888184787423"
   }
 ]
