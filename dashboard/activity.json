@@ -1,5 +1,15 @@
 [
   {
+    "id": "8yvx79",
+    "text": "🚀 Build your SaaS MVP in 6 weeks! Start with a $50/month price point & focus on 1 key feature. Scale by adding more features & pricing tiers as you grow. #SaaS #IndieHacker #MicroSaaS",
+    "type": "tweet",
+    "source": "original",
+    "keyword": "Building profitable SaaS products",
+    "timestamp": "2026-04-20T20:39:19.223Z",
+    "status": "failed",
+    "error": "Rejected by Twitter (Duplicate or Permission)"
+  },
+  {
     "id": "stk89q",
     "text": "Mini SaaS ideas under $1k MRR: Focus on automation tools for task management. Build a simple MVP with 3 core features. 100-1k MRR possible. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
     "type": "tweet",
@@ -988,15 +998,5 @@
     "timestamp": "2026-01-27T16:19:37.592Z",
     "status": "posted",
     "tweetId": "2016184329672470924"
-  },
-  {
-    "id": "l8a39p",
-    "text": "Focus on LTV vs CAC: Profitable SaaS needs LTV 3x CAC. Track monthly metrics, optimize pricing, and scale wisely. #SaaS #IndieHacker #MicroSaaS #BuildInPublic",
-    "type": "tweet",
-    "source": "original",
-    "keyword": "Building profitable SaaS products",
-    "timestamp": "2026-01-26T14:19:43.345Z",
-    "status": "posted",
-    "tweetId": "2015791766633697789"
   }
 ]
